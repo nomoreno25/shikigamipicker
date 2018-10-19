@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -252,4 +253,260 @@ html, body {
     width: 100%;
 }
 </style>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Shikigami Picker</title>
+</head>
+<body>
+<div class="bg">
+    <div class="container">
+<!--     <div class="bannergiaidau">
+        <br>
+        <br>
+        <p style="text-align: center; font-size: 30px;">Chỗ này là cho cái tên giải giải đấu...</p>
+    </div> -->
+    <br><br><br><br>
+    <div id="btnShowShiki">
+        <button onclick="sendSrc()">Lưu lại đội hình</button>
+        <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button>Mở trang show đội hình (tab mới)</button></a>
+        <input type="password" name="savecode" id="matkhau">
+    </div>
+    <div class="team1">
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki1">
+            <select id="selectShiki1" onchange="document.getElementById('imgShiki1').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select shikigami...</option>
+                <option value="momonosei">Momo no Sei</option>
+                <option value="yukionna">Yuki Onna</option>
+                <option value="zashikiwarashi">Zashiki Warashi</option>
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki2">
+            <select id="selectShiki2" onchange="document.getElementById('imgShiki2').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select shikigami...</option>
+                <option value="momonosei">Momo no Sei</option>
+                <option value="yukionna">Yuki Onna</option>
+                <option value="zashikiwarashi">Zashiki Warashi</option>
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki3">
+            <select id="selectShiki3" onchange="document.getElementById('imgShiki3').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select shikigami...</option>
+                <option value="momonosei">Momo no Sei</option>
+                <option value="yukionna">Yuki Onna</option>
+                <option value="zashikiwarashi">Zashiki Warashi</option>
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki4">
+            <select id="selectShiki4" onchange="document.getElementById('imgShiki4').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select shikigami...</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki5">
+            <select id="selectShiki5" onchange="document.getElementById('imgShiki5').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select shikigami...</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki6">
+            <select id="selectShiki6" onchange="document.getElementById('imgShiki6').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select main...</option>
+                <option value="yaobikuni">Yao Bikuni</option>
+                <option value="seimei">Seimei</option>
+                <option value="kagura">Kagura</option>
+                <option value="hiromasa">Hiromasa</option>
+            </select>
+        </div>
+    </div>
+<!-- Spaceeeeeeeeeeeeeeeeeee -->
+    <div class="team2">
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki7">
+            <select id="selectShiki7" onchange="document.getElementById('imgShiki7').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select categories</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki8">
+            <select id="selectShiki8" onchange="document.getElementById('imgShiki8').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select categories</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki9">
+            <select id="selectShiki9" onchange="document.getElementById('imgShiki9').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select categories</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki10">
+            <select id="selectShiki10" onchange="document.getElementById('imgShiki10').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select categories</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki11">
+            <select id="selectShiki11" onchange="document.getElementById('imgShiki11').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select categories</option>
+                
+            </select>
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="imgShiki12">
+            <select id="selectShiki12" onchange="document.getElementById('imgShiki12').src='./data/'+value+'.png'">
+                <option value="0" disabled selected>Select main...</option>
+                <option value="yaobikuni">Yao Bikuni</option>
+                <option value="seimei">Seimei</option>
+                <option value="kagura">Kagura</option>
+                <option value="hiromasa">Hiromasa</option>
+            </select>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+function sendSrc(){
+    var savecode = document.getElementById('matkhau').value;
+
+    var shiki1 = document.getElementById('imgShiki1').src;
+    var shiki2 = document.getElementById('imgShiki2').src;
+    var shiki3 = document.getElementById('imgShiki3').src;
+    var shiki4 = document.getElementById('imgShiki4').src;
+    var shiki5 = document.getElementById('imgShiki5').src;
+    var shiki6 = document.getElementById('imgShiki6').src;
+    var shiki7 = document.getElementById('imgShiki7').src;
+    var shiki8 = document.getElementById('imgShiki8').src;
+    var shiki9 = document.getElementById('imgShiki9').src;
+    var shiki10 = document.getElementById('imgShiki10').src;
+    var shiki11 = document.getElementById('imgShiki11').src;
+    var shiki12 = document.getElementById('imgShiki12').src;
+
+    if (savecode == 'bananhhai') {
+        window.localStorage.setItem('shiki1',shiki1);
+        window.localStorage.setItem('shiki2',shiki2);
+        window.localStorage.setItem('shiki3',shiki3);
+        window.localStorage.setItem('shiki4',shiki4);
+        window.localStorage.setItem('shiki5',shiki5);
+        window.localStorage.setItem('shiki6',shiki6);
+        window.localStorage.setItem('shiki7',shiki7);
+        window.localStorage.setItem('shiki8',shiki8);
+        window.localStorage.setItem('shiki9',shiki9);
+        window.localStorage.setItem('shiki10',shiki10);
+        window.localStorage.setItem('shiki11',shiki11);
+        window.localStorage.setItem('shiki12',shiki12);
+    }
+}
+</script>
+</body>
+<style type="text/css">
+html {
+    position: relative;
+    min-width: 1280px;
+    min-height: 1080px;
+    height: 100%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#wrapper {
+    min-height: 100%; 
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.bg::after {
+  content: "";
+  background: url("./data/background.png");
+  /*opacity: 0.5;*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+	width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+#btnShowShiki{
+    height: 5%;
+}
+.team1{
+	height: 40%;
+    width: 100%;
+}
+.team1 .shiki{
+    height: 100%;
+    width: 14%;
+    margin: 1%;
+    display: inline-block;
+    position: relative;
+}
+.team1 .shiki img{
+    border: 2px solid red;
+    border-radius: 25px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
+    background: #FFF;
+
+}
+.team1 .shiki select{
+    margin: 1%;
+    height: 10%;
+    width: 100%;
+}
+
+.team2{
+    height: 40%;
+    width: 100%;
+}
+.team2 .shiki{
+    height: 100%;
+    width: 14%;
+    margin: 1%;
+    display: inline-block;
+    position: relative;
+}
+.team2 .shiki img{
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
+    background: #FFF;
+}
+.team2 .shiki select{
+    margin: 1%;
+    height: 10%;
+    width: 100%;
+}
+</style>
+>>>>>>> c16a648af5e7ecf914c5fad90d429aea1f171eb9
 </html>
