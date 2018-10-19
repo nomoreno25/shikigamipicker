@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Shikigami Show</title>
+</head>
+<body onload="setShiki()">
+<div class="bg">
+    <div class="container">
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+    <div class="team1">
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki1">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki2">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki3">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki4">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki5">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki6">
+        </div>
+    </div>
+<!-- Spaceeeeeeeeeeeeeeeeeee -->
+    <div class="team2">
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki7">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki8">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki9">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki10">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki11">
+        </div>
+        <div class="shiki">
+            <img src="./data/shiki0.png" id="showShiki12">
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+function setShiki(){
+    document.getElementById("showShiki1").src = localStorage.getItem('shiki1');
+    document.getElementById("showShiki2").src = localStorage.getItem('shiki2');
+    document.getElementById("showShiki3").src = localStorage.getItem('shiki3');
+    document.getElementById("showShiki4").src = localStorage.getItem('shiki4');
+    document.getElementById("showShiki5").src = localStorage.getItem('shiki5');
+    document.getElementById("showShiki6").src = localStorage.getItem('shiki6');
+    document.getElementById("showShiki7").src = localStorage.getItem('shiki7');
+    document.getElementById("showShiki8").src = localStorage.getItem('shiki8');
+    document.getElementById("showShiki9").src = localStorage.getItem('shiki9');
+    document.getElementById("showShiki10").src = localStorage.getItem('shiki10');
+    document.getElementById("showShiki11").src = localStorage.getItem('shiki11');
+    document.getElementById("showShiki12").src = localStorage.getItem('shiki12');
+}
+</script>
+</body>
+<style type="text/css">
+html {
+    position: relative;
+    min-width: 1280px;
+    min-height: 1080px;
+    height: 100%;
+}
+.bg{
+    width: 100%;
+    height: 1080px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.bg::after {
+  content: "";
+  background: url("./data/background.png");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+.container{
+	width: 1280px;
+    height: 1080px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.bannergiaidau{
+    height: 250px;
+    background: #bebebe;
+}
+.team1{
+	height: 400px;
+    width: 1280px;
+}
+.team1 .shiki{
+    height: 400px;
+    width: 200px;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+}
+.team1 .shiki img{
+    border: 2px solid red;
+    border-radius: 25px;
+    margin: 20px 0px 5px 0px;
+    height: 300px;
+    width: 200px;
+    background: #FFF;
+
+}
+.team1 .shiki select{
+    height: 30px;
+    width: 200px;
+}
+
+.team2{
+    height: 400px;
+    width: 1280px;
+}
+.team2 .shiki{
+    height: 400px;
+    width: 200px;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+}
+.team2 .shiki img{
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 20px 0px 5px 0px;
+    height: 300px;
+    width: 200px;
+    background: #FFF;
+}
+.team2 .shiki select{
+    height: 30px;
+    width: 200px;
+}
+</style>
+</html>

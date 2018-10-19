@@ -110,10 +110,40 @@
             </select>
         </div>
     </div>
+
+    <div id="btnShowShiki">
+        <a href="showshiki.html" onclick="sendSrc()">Continue</a>
+    </div>
 </div>
 </div>
 <script type="text/javascript">
+function sendSrc(){
+    var shiki1 = document.getElementById('imgShiki1').src;
+    var shiki2 = document.getElementById('imgShiki2').src;
+    var shiki3 = document.getElementById('imgShiki3').src;
+    var shiki4 = document.getElementById('imgShiki4').src;
+    var shiki5 = document.getElementById('imgShiki5').src;
+    var shiki6 = document.getElementById('imgShiki6').src;
+    var shiki7 = document.getElementById('imgShiki7').src;
+    var shiki8 = document.getElementById('imgShiki8').src;
+    var shiki9 = document.getElementById('imgShiki9').src;
+    var shiki10 = document.getElementById('imgShiki10').src;
+    var shiki11 = document.getElementById('imgShiki11').src;
+    var shiki12 = document.getElementById('imgShiki12').src;
 
+    window.localStorage.setItem('shiki1',shiki1);
+    window.localStorage.setItem('shiki2',shiki2);
+    window.localStorage.setItem('shiki3',shiki3);
+    window.localStorage.setItem('shiki4',shiki4);
+    window.localStorage.setItem('shiki5',shiki5);
+    window.localStorage.setItem('shiki6',shiki6);
+    window.localStorage.setItem('shiki7',shiki7);
+    window.localStorage.setItem('shiki8',shiki8);
+    window.localStorage.setItem('shiki9',shiki9);
+    window.localStorage.setItem('shiki10',shiki10);
+    window.localStorage.setItem('shiki11',shiki11);
+    window.localStorage.setItem('shiki12',shiki12);
+}
 </script>
 </body>
 <style type="text/css">
