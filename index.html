@@ -11,6 +11,7 @@
     <div class="container">
     <br><br><br><br>
     <div id="btnShowShiki" style="margin-left: 1%">
+        <button class="btn" onclick="refreshShiki()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:18px"></i>  Đặt về mặc định</button>
         <button onclick="sendSrc()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Lưu lại đội hình</button>
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Mở trang show đội hình (tab mới)</button></a>
         <input placeholder="  Password:..." type="password" name="savecode" id="matkhau" style="font-size: 18px; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">
@@ -1195,6 +1196,35 @@ function sendSrc(){
         window.localStorage.setItem('shiki11',shiki11);
         window.localStorage.setItem('shiki12',shiki12);
     }
+}
+
+function refreshShiki(){
+    var shiki0 = './data/adslogo.png';
+    document.getElementById("imgShiki1").src = shiki0;
+    document.getElementById("imgShiki2").src = shiki0;
+    document.getElementById("imgShiki3").src = shiki0;
+    document.getElementById("imgShiki4").src = shiki0;
+    document.getElementById("imgShiki5").src = shiki0;
+    document.getElementById("imgShiki6").src = shiki0;
+    document.getElementById("imgShiki7").src = shiki0;
+    document.getElementById("imgShiki8").src = shiki0;
+    document.getElementById("imgShiki9").src = shiki0;
+    document.getElementById("imgShiki10").src = shiki0;
+    document.getElementById("imgShiki11").src = shiki0;
+    document.getElementById("imgShiki12").src = shiki0;
+
+    document.getElementById("selectShiki1").value = '0';
+    document.getElementById("selectShiki2").value = '0';
+    document.getElementById("selectShiki3").value = '0';
+    document.getElementById("selectShiki4").value = '0';
+    document.getElementById("selectShiki5").value = '0';
+    document.getElementById("selectShiki6").value = '0';
+    document.getElementById("selectShiki7").value = '0';
+    document.getElementById("selectShiki8").value = '0';
+    document.getElementById("selectShiki9").value = '0';
+    document.getElementById("selectShiki10").value = '0';
+    document.getElementById("selectShiki11").value = '0';
+    document.getElementById("selectShiki12").value = '0';
 }
 </script>
 </body>

@@ -14,8 +14,8 @@
     	<br>
     	<br>
     	<br>
-    	<button class="btn" onclick="refreshShiki()" style="font-size: 20px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Đặt về mặc định</button>
-    	<button class="btn" onclick="setNewShiki()" style="font-size: 20px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Load đội hình vừa lưu</button>
+    	<!-- <button class="btn" onclick="refreshShiki()" style="font-size: 20px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Đặt về mặc định</button>
+    	<button class="btn" onclick="setNewShiki()" style="font-size: 20px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Load đội hình vừa lưu</button> -->
         <a href="https://www.facebook.com/aoisama.2311/" target="_blank" style="float: right; margin-right: 3%;"><button style="font-size: 16px; font-weight: bold; color: #fff; background: blue; border: 2px solid blue; border-radius: 10px;"><i class="fa fa-facebook" style="font-size:18px;color:#fff;"></i> Aoi Sama</button></a>
     	<br>
     	<br>
@@ -94,6 +94,28 @@ function refreshShiki(){
     document.getElementById("showShiki11").src = shiki0;
     document.getElementById("showShiki12").src = shiki0;
 }
+
+function autoLoadImg() {
+
+    function updateImage() {
+        document.getElementById("showShiki1").src = localStorage.getItem('shiki1');
+        document.getElementById("showShiki2").src = localStorage.getItem('shiki2');
+        document.getElementById("showShiki3").src = localStorage.getItem('shiki3');
+        document.getElementById("showShiki4").src = localStorage.getItem('shiki4');
+        document.getElementById("showShiki5").src = localStorage.getItem('shiki5');
+        document.getElementById("showShiki6").src = localStorage.getItem('shiki6');
+        document.getElementById("showShiki7").src = localStorage.getItem('shiki7');
+        document.getElementById("showShiki8").src = localStorage.getItem('shiki8');
+        document.getElementById("showShiki9").src = localStorage.getItem('shiki9');
+        document.getElementById("showShiki10").src = localStorage.getItem('shiki10');
+        document.getElementById("showShiki11").src = localStorage.getItem('shiki11');
+        document.getElementById("showShiki12").src = localStorage.getItem('shiki12');
+    }
+
+    setInterval(updateImage, 1000);
+}
+
+window.onload = autoLoadImg();
 </script>
 </body>
 <style type="text/css">
