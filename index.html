@@ -15,6 +15,7 @@
     <div id="btnShowShiki">
         <button onclick="sendSrc()">Lưu lại đội hình</button>
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button>Mở trang show đội hình (tab mới)</button></a>
+        <input type="password" name="savecode" id="matkhau">
     </div>
     <div class="team1">
         <div class="shiki">
@@ -117,6 +118,8 @@
 </div>
 <script type="text/javascript">
 function sendSrc(){
+    var savecode = document.getElementById('matkhau').value;
+
     var shiki1 = document.getElementById('imgShiki1').src;
     var shiki2 = document.getElementById('imgShiki2').src;
     var shiki3 = document.getElementById('imgShiki3').src;
@@ -130,18 +133,20 @@ function sendSrc(){
     var shiki11 = document.getElementById('imgShiki11').src;
     var shiki12 = document.getElementById('imgShiki12').src;
 
-    window.localStorage.setItem('shiki1',shiki1);
-    window.localStorage.setItem('shiki2',shiki2);
-    window.localStorage.setItem('shiki3',shiki3);
-    window.localStorage.setItem('shiki4',shiki4);
-    window.localStorage.setItem('shiki5',shiki5);
-    window.localStorage.setItem('shiki6',shiki6);
-    window.localStorage.setItem('shiki7',shiki7);
-    window.localStorage.setItem('shiki8',shiki8);
-    window.localStorage.setItem('shiki9',shiki9);
-    window.localStorage.setItem('shiki10',shiki10);
-    window.localStorage.setItem('shiki11',shiki11);
-    window.localStorage.setItem('shiki12',shiki12);
+    if (savecode == 'bananhhai') {
+        window.localStorage.setItem('shiki1',shiki1);
+        window.localStorage.setItem('shiki2',shiki2);
+        window.localStorage.setItem('shiki3',shiki3);
+        window.localStorage.setItem('shiki4',shiki4);
+        window.localStorage.setItem('shiki5',shiki5);
+        window.localStorage.setItem('shiki6',shiki6);
+        window.localStorage.setItem('shiki7',shiki7);
+        window.localStorage.setItem('shiki8',shiki8);
+        window.localStorage.setItem('shiki9',shiki9);
+        window.localStorage.setItem('shiki10',shiki10);
+        window.localStorage.setItem('shiki11',shiki11);
+        window.localStorage.setItem('shiki12',shiki12);
+    }
 }
 </script>
 </body>
