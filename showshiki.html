@@ -6,18 +6,19 @@
     <title>Shikigami Show</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="setShiki()">
+<body onload="refreshShiki()">
 <div class="bg">
     <div class="container">
-    	<button class="btn" onclick="window.location.reload()" style="font-size: 20px; font-weight: bold;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Reload</button>
+    	<div class="btnShowShiki">
     	<br>
     	<br>
     	<br>
+    	<button class="btn" onclick="refreshShiki()" style="font-size: 20px; font-weight: bold;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Đặt về mặc định</button>
+    	<button class="btn" onclick="setNewShiki()" style="font-size: 20px; font-weight: bold;"><i class="fa fa-refresh fa-spin" style="font-size:24px"></i>  Load đội hình vừa lưu</button>
     	<br>
     	<br>
     	<br>
-    	<br>
-    	<br>
+    	</div>
     <div class="team1">
         <div class="shiki">
             <img src="./data/shiki0.png" id="showShiki1">
@@ -62,7 +63,7 @@
 </div>
 </div>
 <script type="text/javascript">
-function setShiki(){
+function setNewShiki(){
     document.getElementById("showShiki1").src = localStorage.getItem('shiki1');
     document.getElementById("showShiki2").src = localStorage.getItem('shiki2');
     document.getElementById("showShiki3").src = localStorage.getItem('shiki3');
@@ -76,18 +77,40 @@ function setShiki(){
     document.getElementById("showShiki11").src = localStorage.getItem('shiki11');
     document.getElementById("showShiki12").src = localStorage.getItem('shiki12');
 }
+function refreshShiki(){
+	var shiki0 = './data/shiki0.png';
+	document.getElementById("showShiki1").src = shiki0
+    document.getElementById("showShiki2").src = shiki0;
+    document.getElementById("showShiki3").src = shiki0;
+    document.getElementById("showShiki4").src = shiki0;
+    document.getElementById("showShiki5").src = shiki0;
+    document.getElementById("showShiki6").src = shiki0;
+    document.getElementById("showShiki7").src = shiki0;
+    document.getElementById("showShiki8").src = shiki0;
+    document.getElementById("showShiki9").src = shiki0;
+    document.getElementById("showShiki10").src = shiki0;
+    document.getElementById("showShiki11").src = shiki0;
+    document.getElementById("showShiki12").src = shiki0;
+}
 </script>
 </body>
 <style type="text/css">
-html {
+/*html {
     position: relative;
     min-width: 1280px;
     min-height: 1080px;
     height: 100%;
+}*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#wrapper {
+    min-height: 100%; 
 }
 .bg{
     width: 100%;
-    height: 1080px;
+    height: 100%;
     margin: 0 auto;
     display: block;
     position: relative;
@@ -104,63 +127,68 @@ html {
   z-index: -1;   
 }
 .container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
 	width: 1280px;
-    height: 1080px;
+    height: 100%;
     margin: 0 auto;
-    display: block;
-    position: relative;
 }
-.bannergiaidau{
-    height: 250px;
-    background: #bebebe;
+#btnShowShiki{
+    height: 5%;
 }
 .team1{
-	height: 400px;
-    width: 1280px;
+	height: 40%;
+    width: 100%;
 }
 .team1 .shiki{
-    height: 400px;
-    width: 200px;
-    margin: 5px;
+    height: 100%;
+    width: 14%;
+    margin: 1%;
     display: inline-block;
     position: relative;
 }
 .team1 .shiki img{
     border: 2px solid red;
     border-radius: 25px;
-    margin: 20px 0px 5px 0px;
-    height: 300px;
-    width: 200px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
     background: #FFF;
 
 }
 .team1 .shiki select{
-    height: 30px;
-    width: 200px;
+    margin: 1%;
+    height: 10%;
+    width: 100%;
 }
 
 .team2{
-    height: 400px;
-    width: 1280px;
+    height: 40%;
+    width: 100%;
 }
 .team2 .shiki{
-    height: 400px;
-    width: 200px;
-    margin: 5px;
+    height: 100%;
+    width: 14%;
+    margin: 1%;
     display: inline-block;
     position: relative;
 }
 .team2 .shiki img{
     border: 2px solid blue;
     border-radius: 25px;
-    margin: 20px 0px 5px 0px;
-    height: 300px;
-    width: 200px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
     background: #FFF;
 }
 .team2 .shiki select{
-    height: 30px;
-    width: 200px;
+    margin: 1%;
+    height: 10%;
+    width: 100%;
 }
 </style>
 </html>
