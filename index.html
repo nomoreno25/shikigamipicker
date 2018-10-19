@@ -11,7 +11,7 @@
     <div class="container">
     <br><br><br><br>
     <div id="btnShowShiki" style="margin-left: 1%">
-        <button class="btn" onclick="refreshShiki() sendSrc()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:18px"></i>  Đặt về mặc định</button>
+        <button class="btn" onclick="refreshShiki()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;"><i class="fa fa-refresh fa-spin" style="font-size:18px"></i>  Đặt về mặc định</button>
         <button onclick="sendSrc()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Lưu lại đội hình</button>
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Mở trang show đội hình (tab mới)</button></a>
         <input placeholder="  Password:..." type="password" name="savecode" id="matkhau" style="font-size: 18px; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">
@@ -1225,6 +1225,8 @@ function refreshShiki(){
     document.getElementById("selectShiki10").value = '0';
     document.getElementById("selectShiki11").value = '0';
     document.getElementById("selectShiki12").value = '0';
+
+    sendSrc();
 }
 </script>
 </body>
