@@ -12,9 +12,11 @@
         <br>
         <p style="text-align: center; font-size: 30px;">Chỗ này là cho cái tên giải giải đấu...</p>
     </div> -->
+    <br><br><br><br>
     <div id="btnShowShiki">
         <button onclick="sendSrc()">Lưu lại đội hình</button>
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button>Mở trang show đội hình (tab mới)</button></a>
+        <input type="password" name="savecode" id="matkhau">
     </div>
     <div class="team1">
         <div class="shiki">
@@ -117,6 +119,8 @@
 </div>
 <script type="text/javascript">
 function sendSrc(){
+    var savecode = document.getElementById('matkhau').value;
+
     var shiki1 = document.getElementById('imgShiki1').src;
     var shiki2 = document.getElementById('imgShiki2').src;
     var shiki3 = document.getElementById('imgShiki3').src;
@@ -130,18 +134,20 @@ function sendSrc(){
     var shiki11 = document.getElementById('imgShiki11').src;
     var shiki12 = document.getElementById('imgShiki12').src;
 
-    window.localStorage.setItem('shiki1',shiki1);
-    window.localStorage.setItem('shiki2',shiki2);
-    window.localStorage.setItem('shiki3',shiki3);
-    window.localStorage.setItem('shiki4',shiki4);
-    window.localStorage.setItem('shiki5',shiki5);
-    window.localStorage.setItem('shiki6',shiki6);
-    window.localStorage.setItem('shiki7',shiki7);
-    window.localStorage.setItem('shiki8',shiki8);
-    window.localStorage.setItem('shiki9',shiki9);
-    window.localStorage.setItem('shiki10',shiki10);
-    window.localStorage.setItem('shiki11',shiki11);
-    window.localStorage.setItem('shiki12',shiki12);
+    if (savecode == 'bananhhai') {
+        window.localStorage.setItem('shiki1',shiki1);
+        window.localStorage.setItem('shiki2',shiki2);
+        window.localStorage.setItem('shiki3',shiki3);
+        window.localStorage.setItem('shiki4',shiki4);
+        window.localStorage.setItem('shiki5',shiki5);
+        window.localStorage.setItem('shiki6',shiki6);
+        window.localStorage.setItem('shiki7',shiki7);
+        window.localStorage.setItem('shiki8',shiki8);
+        window.localStorage.setItem('shiki9',shiki9);
+        window.localStorage.setItem('shiki10',shiki10);
+        window.localStorage.setItem('shiki11',shiki11);
+        window.localStorage.setItem('shiki12',shiki12);
+    }
 }
 </script>
 </body>
@@ -152,9 +158,16 @@ html {
     min-height: 1080px;
     height: 100%;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#wrapper {
+    min-height: 100%; 
+}
 .bg{
     width: 100%;
-    height: 1080px;
+    height: 100%;
     margin: 0 auto;
     display: block;
     position: relative;
@@ -171,63 +184,68 @@ html {
   z-index: -1;   
 }
 .container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
 	width: 1280px;
-    height: 1080px;
+    height: 100%;
     margin: 0 auto;
-    display: block;
-    position: relative;
 }
-.bannergiaidau{
-    height: 250px;
-    background: #bebebe;
+#btnShowShiki{
+    height: 5%;
 }
 .team1{
-	height: 400px;
-    width: 1280px;
+	height: 40%;
+    width: 100%;
 }
 .team1 .shiki{
-    height: 400px;
-    width: 200px;
-    margin: 5px;
+    height: 100%;
+    width: 14%;
+    margin: 1%;
     display: inline-block;
     position: relative;
 }
 .team1 .shiki img{
     border: 2px solid red;
     border-radius: 25px;
-    margin: 20px 0px 5px 0px;
-    height: 300px;
-    width: 200px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
     background: #FFF;
 
 }
 .team1 .shiki select{
-    height: 30px;
-    width: 200px;
+    margin: 1%;
+    height: 10%;
+    width: 100%;
 }
 
 .team2{
-    height: 400px;
-    width: 1280px;
+    height: 40%;
+    width: 100%;
 }
 .team2 .shiki{
-    height: 400px;
-    width: 200px;
-    margin: 5px;
+    height: 100%;
+    width: 14%;
+    margin: 1%;
     display: inline-block;
     position: relative;
 }
 .team2 .shiki img{
     border: 2px solid blue;
     border-radius: 25px;
-    margin: 20px 0px 5px 0px;
-    height: 300px;
-    width: 200px;
+    margin: 1%;
+    height: 80%;
+    width: 100%;
     background: #FFF;
 }
 .team2 .shiki select{
-    height: 30px;
-    width: 200px;
+    margin: 1%;
+    height: 10%;
+    width: 100%;
 }
 </style>
 </html>
