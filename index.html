@@ -15,6 +15,8 @@
         <button onclick="sendSrc()" style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Lưu lại đội hình</button>
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Mở trang show đội hình (tab mới)</button></a>
         <input placeholder="  Password:..." type="password" name="savecode" id="matkhau" style="font-size: 18px; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">
+        <span id="saimatkhau" style="color:red" hidden="true"><i class="fa fa-arrow-circle-left" style="font-size:18px;color:red"></i> Sai mật khẩu</span>
+        <span id="dungmatkhau" style="color:red" hidden="true"><i class="fa fa-check-square" style="font-size:18px;color:red"></i> Đã lưu đội hình</span>
         <a href="https://www.facebook.com/aoisama.2311/" target="_blank" style="float: right; margin-right: 3%;"><button style="font-size: 16px; font-weight: bold; color: #fff; background: blue; border: 2px solid blue; border-radius: 10px;"><i class="fa fa-facebook" style="font-size:18px;color:#fff;"></i> Aoi Sama</button></a>
 <!--         <br>
         <input type="text" id="ign1" placeholder="Tên người chơi 1..." style="margin: 5px; border: 2px solid red; border-radius: 15px;">
@@ -1188,6 +1190,8 @@ function sendSrc(){
     var shiki12 = document.getElementById('imgShiki12').src;
 
     if (savecode == 'abc123abc') {
+        document.getElementById("saimatkhau").hidden=true;
+        document.getElementById("dungmatkhau").hidden=false;
         // window.localStorage.setItem('tengnuoichoi1',tengnuoichoi1);
         // window.localStorage.setItem('tengnuoichoi2',tengnuoichoi2);
         window.localStorage.setItem('shiki1',shiki1);
@@ -1202,6 +1206,9 @@ function sendSrc(){
         window.localStorage.setItem('shiki10',shiki10);
         window.localStorage.setItem('shiki11',shiki11);
         window.localStorage.setItem('shiki12',shiki12);
+    }else if (savecode != 'abc123abc'){
+        document.getElementById("saimatkhau").hidden=false;
+        document.getElementById("dungmatkhau").hidden=true;
     }
 }
 
