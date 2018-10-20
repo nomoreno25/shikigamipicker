@@ -16,9 +16,9 @@
         <a href="showshiki.html" onclick="sendSrc()" target="_blank"><button style="font-size: 18px; font-weight: bold; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">Mở trang show đội hình (tab mới)</button></a>
         <input placeholder="  Password:..." type="password" name="savecode" id="matkhau" style="font-size: 18px; color: #000; background: #fff; border: 2px solid red; border-radius: 10px;">
         <a href="https://www.facebook.com/aoisama.2311/" target="_blank" style="float: right; margin-right: 3%;"><button style="font-size: 16px; font-weight: bold; color: #fff; background: blue; border: 2px solid blue; border-radius: 10px;"><i class="fa fa-facebook" style="font-size:18px;color:#fff;"></i> Aoi Sama</button></a>
-        <br>
+<!--         <br>
         <input type="text" id="ign1" placeholder="Tên người chơi 1..." style="margin: 5px; border: 2px solid red; border-radius: 15px;">
-        <input type="text" id="ign2" placeholder="Tên người chơi 2..." style="margin: 5px; border: 2px solid blue; border-radius: 15px;">
+        <input type="text" id="ign2" placeholder="Tên người chơi 2..." style="margin: 5px; border: 2px solid blue; border-radius: 15px;"> -->
     </div>
     <div class="team1">
         <div class="shiki">
@@ -1171,8 +1171,8 @@
 function sendSrc(){
     var savecode = document.getElementById('matkhau').value;
 
-    var tengnuoichoi1 = document.getElementById('ign1').value;
-    var tengnuoichoi2 = document.getElementById('ign2').value;
+    // var tengnuoichoi1 = document.getElementById('ign1').value;
+    // var tengnuoichoi2 = document.getElementById('ign2').value;
 
     var shiki1 = document.getElementById('imgShiki1').src;
     var shiki2 = document.getElementById('imgShiki2').src;
@@ -1187,9 +1187,9 @@ function sendSrc(){
     var shiki11 = document.getElementById('imgShiki11').src;
     var shiki12 = document.getElementById('imgShiki12').src;
 
-    if (savecode == 'abc123abc') {
-        window.localStorage.setItem('tengnuoichoi1',tengnuoichoi1);
-        window.localStorage.setItem('tengnuoichoi2',tengnuoichoi2);
+    if (savecode == 'ioa') {
+        // window.localStorage.setItem('tengnuoichoi1',tengnuoichoi1);
+        // window.localStorage.setItem('tengnuoichoi2',tengnuoichoi2);
         window.localStorage.setItem('shiki1',shiki1);
         window.localStorage.setItem('shiki2',shiki2);
         window.localStorage.setItem('shiki3',shiki3);
@@ -1207,8 +1207,8 @@ function sendSrc(){
 
 function refreshShiki(){
     var shiki0 = './data/adslogo.png';
-    document.getElementById('ign1').value = "Người chơi 1";
-    document.getElementById('ign2').value = "Người chơi 2";
+    // document.getElementById('ign1').value = "Người chơi 1";
+    // document.getElementById('ign2').value = "Người chơi 2";
     document.getElementById("imgShiki1").src = shiki0;
     document.getElementById("imgShiki2").src = shiki0;
     document.getElementById("imgShiki3").src = shiki0;
